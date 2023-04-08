@@ -37,7 +37,7 @@ public class Expense {
     @Column(name = "sheet")
     private String mese;
 
-    @Column(name= "year")
+    @Column
     private Integer anno;
 
 
