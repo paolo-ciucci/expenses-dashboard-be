@@ -34,6 +34,8 @@ public class Expense {
 
     private String canale;
 
+    private String provenienza;
+
     @Column(name = "sheet")
     private String mese;
 

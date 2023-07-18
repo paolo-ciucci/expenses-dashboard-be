@@ -34,6 +34,11 @@ public class ExpenseServiceImpl implements ExpenseService {
     }
 
     @Override
+    public List<Expense> getDetailByMonth(String mese, Integer anno) {
+        return this.expenseRepo.getDetailByMonth_own_transactions_excluded(mese, anno);
+    }
+
+    @Override
     public List<Expense> findAllByImportoGreaterThan(Double value) {
         return this.expenseRepo.findAllByImportoGreaterThan(value);
     }

@@ -14,6 +14,8 @@ public interface ExpenseService {
 
     List<Expense> findAllByAnno(Integer anno);
 
+    List<Expense> getDetailByMonth(String mese, Integer anno);
+
     List<Expense> findAllByImportoGreaterThan(Double value);
 
     List<Expense> findAllByImportoLessThan(Double value);

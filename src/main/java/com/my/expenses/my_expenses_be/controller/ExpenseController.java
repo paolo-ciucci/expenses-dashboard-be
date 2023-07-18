@@ -33,4 +33,8 @@ public ExpenseController (ExpenseService expenseService) {
     public ResponseEntity<Iterable<Expense>> getAllByYearAndMonth(@RequestParam("anno") Integer anno, @RequestParam("mese") String mese) {
         return ResponseEntity.ok().body(expenseService.findAllByMeseAndAnno(mese, anno));
     }
+    @GetMapping(value = "/detail_by_month")
+    public ResponseEntity<Iterable<Expense>> getDetailByMonth(@RequestParam("anno") Integer anno, @RequestParam("mese") String mese) {
+        return ResponseEntity.ok().body(expenseService.getDetailByMonth(mese, anno));
+    }
 }
